@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/features/splash/ui/screens/widgets/splash_view_body.dart';
+import 'package:fruit_hub/features/splash/ui/screens/widgets/screen_body.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -7,7 +7,7 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SplashScreenBody(),
+      body: ScreenBody(),
       backgroundColor: Colors.white,
     );
   }

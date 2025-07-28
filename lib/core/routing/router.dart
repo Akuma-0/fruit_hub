@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/features/onpoardin/ui/screens/on_boarding_screen.dart';
+import 'package:fruit_hub/features/on_boarding/ui/screens/on_boarding_screen.dart';
 import 'package:fruit_hub/features/splash/ui/screens/splash_screen.dart';
 
 Route<dynamic> onGenerateRoute(RouteSettings settings) {
