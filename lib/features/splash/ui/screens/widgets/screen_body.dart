@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:fruit_hub/features/onpoardin/ui/screens/on_boarding_screen.dart';
+import 'package:fruit_hub/features/on_boarding/ui/screens/on_boarding_screen.dart';
 
-class SplashScreenBody extends StatefulWidget {
-  const SplashScreenBody({super.key});
+class ScreenBody extends StatefulWidget {
+  const ScreenBody({super.key});
 
   @override
-  State<SplashScreenBody> createState() => _SplashScreenBodyState();
+  State<ScreenBody> createState() => _ScreenBodyState();
 }
 
-class _SplashScreenBodyState extends State<SplashScreenBody> {
+class _ScreenBodyState extends State<ScreenBody> {
   @override
   void initState() {
     executeNavigation();
@@ -24,7 +24,7 @@ class _SplashScreenBodyState extends State<SplashScreenBody> {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Row(
-          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.end,
           children: [SvgPicture.asset('assets/images/plant.svg')],
         ),
         SvgPicture.asset('assets/images/logo.svg'),
