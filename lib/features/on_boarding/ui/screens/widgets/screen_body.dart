@@ -1,7 +1,9 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
+import 'package:fruit_hub/core/services/shared_preferences_singleton.dart';
 import 'package:fruit_hub/core/styles/app_colors.dart';
 import 'package:fruit_hub/core/widgets/app_text_button.dart';
+import 'package:fruit_hub/features/auth/ui/screens/login_screen.dart';
 import 'package:fruit_hub/features/on_boarding/ui/screens/widgets/on_boarding_page_view.dart';
 
 class ScreenBody extends StatefulWidget {
@@ -45,7 +47,7 @@ class _ScreenBodyState extends State<ScreenBody> {
             color:
                 (currentPage == 1)
                     ? AppColors.primaryColor
-                    : AppColors.secondaryColor.withAlpha(150),
+                    : AppColors.lightGreen.withAlpha(150),
             activeSize: Size.square(11),
             size: Size.square(9),
           ),
@@ -60,7 +62,12 @@ class _ScreenBodyState extends State<ScreenBody> {
             padding: const EdgeInsets.symmetric(horizontal: 16.0),
             child: AppTextButton(
               text: 'ابدأ الآن',
-              onPressed: () {},
+              onPressed: () {
+                SharedPreferencesSingleton.setBool('isOnBoardingCompleted', true);
+                Navigator.of(
+                  context,
+                ).pushReplacementNamed(LoginScreen.routeName);
+              },
               color: AppColors.primaryColor,
               textColor: Colors.white,
             ),
