@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:fruit_hub/core/services/shared_preferences_singleton.dart';
+import 'package:fruit_hub/features/auth/ui/screens/login_screen.dart';
 import 'package:fruit_hub/features/on_boarding/ui/screens/on_boarding_screen.dart';
 
 class ScreenBody extends StatefulWidget {
@@ -32,10 +34,12 @@ class _ScreenBodyState extends State<ScreenBody> {
       ],
     );
   }
-  
+
   void executeNavigation() {
-    Future.delayed( const Duration(seconds: 2), () {
-      Navigator.pushReplacementNamed(context, OnBoardingScreen.routeName);
+    Future.delayed(const Duration(seconds: 2), () {
+      SharedPreferencesSingleton.getBool('isOnBoardingCompleted')
+          ? Navigator.pushReplacementNamed(context, LoginScreen.routeName)
+          : Navigator.pushReplacementNamed(context, OnBoardingScreen.routeName);
     });
   }
 }
