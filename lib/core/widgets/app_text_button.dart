@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_hub/core/styles/app_text_styles.dart';
 
 // ignore: must_be_immutable
 class AppTextButton extends StatelessWidget {
@@ -26,12 +27,7 @@ class AppTextButton extends StatelessWidget {
       ),
       child: Text(
         text,
-        style: TextStyle(
-          color: textColor,
-          fontSize: 16,
-          fontWeight: FontWeight.w700,
-          fontFamily: 'Cairo',
-        )
+        style: TextStyles.bold16.copyWith(color: textColor),
       ),
     );
   }
