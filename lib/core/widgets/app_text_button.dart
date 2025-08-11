@@ -8,12 +8,12 @@ class AppTextButton extends StatelessWidget {
     required this.text,
     required this.onPressed,
     required this.color,
-    this.textColor,
+    this.textColor = Colors.white,
   });
   final String text;
   final VoidCallback onPressed;
   final Color? color;
-  Color? textColor = Colors.white;
+  Color textColor ;
   @override
   Widget build(BuildContext context) {
     return TextButton(
