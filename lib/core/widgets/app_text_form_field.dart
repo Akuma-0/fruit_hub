@@ -6,21 +6,28 @@ class AppTextFormField extends StatelessWidget {
     super.key,
     required this.hintText,
     this.controller,
-    this.validator,
     required this.keyboardType,
     this.isObscure = false,
     this.suffixIcon,
+    this.onSaved,
   });
   final String hintText;
   final TextEditingController? controller;
-  final FormFieldValidator<String>? validator;
   final TextInputType keyboardType;
   bool isObscure;
   final Widget? suffixIcon;
+  void Function(String?)? onSaved;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      validator: (value) {
+        if (value == null || value.isEmpty) {
+          return 'هذا الحقل مطلوب';
+        }
+        return null;
+      },
+      onSaved: onSaved,
       keyboardType: keyboardType,
       obscureText: isObscure,
       decoration: InputDecoration(

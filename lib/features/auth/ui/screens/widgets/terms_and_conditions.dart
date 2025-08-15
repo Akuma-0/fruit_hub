@@ -5,7 +5,9 @@ import 'package:fruit_hub/core/styles/app_text_styles.dart';
 import 'package:fruit_hub/core/widgets/app_check_box.dart';
 
 class TermsAndConditions extends StatefulWidget {
-  TermsAndConditions({super.key});
+  TermsAndConditions({super.key, required this.onChanged});
+
+  final ValueChanged<bool> onChanged;
 
   @override
   State<TermsAndConditions> createState() => _TermsAndConditionsState();
@@ -17,11 +19,15 @@ class _TermsAndConditionsState extends State<TermsAndConditions> {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        AppCheckBox(isChecked: isAgreed, onChecked: (value) {
-          setState(() {
-            isAgreed = value;
-          });
-        }),
+        AppCheckBox(
+          isChecked: isAgreed,
+          onChecked: (value) {
+            setState(() {
+              isAgreed = value;
+              widget.onChanged(value);
+            });
+          },
+        ),
 
         SizedBox(width: 16),
         Expanded(
