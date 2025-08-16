@@ -112,13 +112,6 @@ class _LoginScreenBodyState extends State<LoginScreenBody> {
                 },
               ),
               SizedBox(height: 16),
-              //apple login
-              SocialLoginButton(
-                text: 'تسجيل بواسطة أبل',
-                iconPath: 'assets/images/apple_icon.svg',
-                onPressed: () {},
-              ),
-              SizedBox(height: 16),
               //facebook login
               SocialLoginButton(
                 text: 'تسجيل بواسطة فيسبوك',
