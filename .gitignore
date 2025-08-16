@@ -43,3 +43,35 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Firebase and sensitive configuration files
+lib/firebase_options.dart
+android/app/google-services.json
+ios/Runner/GoogleService-Info.plist
+
+# Environment variables and API keys
+.env
+.env.local
+.env.production
+.env.staging
+**/api_keys.dart
+**/secrets.dart
+**/config.dart
+
+# Token files and authentication
+**/tokens.dart
+**/token.dart
+**/auth_tokens.dart
+**/access_token.dart
+**/refresh_token.dart
+**/*token*.json
+**/*tokens*.json
+android/app/src/main/res/values/strings.xml
+**/*auth*.json
+**/*credentials*.json
+
+# Platform-specific sensitive files
+android/key.properties
+android/app/keystore.properties
+ios/Runner/GoogleService-Info.plist
+ios/firebase_app_id_file.json

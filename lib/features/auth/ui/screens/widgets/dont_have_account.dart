@@ -2,7 +2,6 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/core/styles/app_colors.dart';
 import 'package:fruit_hub/core/styles/app_text_styles.dart';
-import 'package:fruit_hub/features/auth/ui/screens/register_screen.dart';
 
 class DontHaveAccount extends StatelessWidget {
   const DontHaveAccount({
