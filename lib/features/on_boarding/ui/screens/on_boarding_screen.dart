@@ -3,7 +3,7 @@ import 'package:fruit_hub/features/on_boarding/ui/screens/widgets/on_boarding_sc
  
 class OnBoardingScreen extends StatelessWidget {
   const OnBoardingScreen({super.key});
-  static const String routeName = '/onboarding';
+  static const String routeName = 'onboarding';
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -11,6 +11,7 @@ AppBar buildAppBar({
     centerTitle: true,
     elevation: 0,
     automaticallyImplyLeading: false,
+    scrolledUnderElevation: 0,
     leading:
         isBackButtonVisible
             ? GestureDetector(

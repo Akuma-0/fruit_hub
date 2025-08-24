@@ -8,7 +8,7 @@ import 'package:fruit_hub/features/auth/ui/screens/widgets/register_screen_body_
 
 class RegisterScreen extends StatelessWidget {
   const RegisterScreen({super.key});
-  static const String routeName = '/register';
+  static const String routeName = 'register';
   @override
   Widget build(BuildContext context) {
     return BlocProvider(

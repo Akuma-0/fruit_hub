@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/features/auth/ui/screens/login_screen.dart';
 import 'package:fruit_hub/features/auth/ui/screens/register_screen.dart';
+import 'package:fruit_hub/features/home/ui/screens/home_screen.dart';
 import 'package:fruit_hub/features/on_boarding/ui/screens/on_boarding_screen.dart';
 import 'package:fruit_hub/features/splash/ui/screens/splash_screen.dart';
 
@@ -14,6 +15,8 @@ Route<dynamic> onGenerateRoute(RouteSettings settings) {
       return MaterialPageRoute(builder: (context) => LoginScreen());
     case RegisterScreen.routeName:
       return MaterialPageRoute(builder: (context) => RegisterScreen());
+    case HomeScreen.routeName:
+      return MaterialPageRoute(builder: (context) => HomeScreen());
 
     default:
       return MaterialPageRoute(

@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruit_hub/core/helpers/build_error_bar.dart';
 import 'package:fruit_hub/features/auth/ui/cubits/login_cubit/login_cubit.dart';
 import 'package:fruit_hub/features/auth/ui/screens/widgets/login_screen_body.dart';
+import 'package:fruit_hub/features/home/ui/screens/home_screen.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
 class LoginScreenBodyBlocConsumer extends StatelessWidget {
@@ -14,7 +15,9 @@ class LoginScreenBodyBlocConsumer extends StatelessWidget {
       listener: (context, state) {
         if (state is LoginFailure) {
           buildErrorBar(context, state.message);
-        } else if (state is LoginSuccess) {}
+        } else if (state is LoginSuccess) {
+          Navigator.pushNamed(context, HomeScreen.routeName);
+        }
       },
       builder: (context, state) {
         return ModalProgressHUD(
