@@ -3,7 +3,7 @@ import 'package:fruit_hub/features/splash/ui/screens/widgets/aplash_screen_body.
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
-  static const String routeName = '/splash';
+  static const String routeName = 'splash';
   @override
   Widget build(BuildContext context) {
     return Scaffold(

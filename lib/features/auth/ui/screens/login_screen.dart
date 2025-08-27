@@ -8,7 +8,7 @@ import 'package:fruit_hub/features/auth/ui/screens/widgets/login_screen_body_blo
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
-  static const String routeName = '/login';
+  static const String routeName = 'login';
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
