@@ -16,7 +16,7 @@ class LoginScreenBodyBlocConsumer extends StatelessWidget {
         if (state is LoginFailure) {
           buildErrorBar(context, state.message);
         } else if (state is LoginSuccess) {
-          Navigator.pushNamed(context, HomeScreen.routeName);
+          Navigator.pushReplacementNamed(context, HomeScreen.routeName);
         }
       },
       builder: (context, state) {
