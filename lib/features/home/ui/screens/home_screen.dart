@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/features/home/ui/screens/widgets/home_screen_body.dart';
+import 'package:fruit_hub/features/home/ui/screens/widgets/home_screen_bottom_nav_bar.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -11,6 +12,7 @@ class HomeScreen extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 16.0),
         child: HomeScreenBody(),
       ),
+      bottomNavigationBar: HomeScreenBottomNavBar(),
     );
   }
 }

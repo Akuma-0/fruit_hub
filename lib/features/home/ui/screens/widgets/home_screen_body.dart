@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/core/widgets/fruit_item_card.dart';
 import 'package:fruit_hub/features/home/ui/screens/widgets/best_selling_header.dart';
 import 'package:fruit_hub/features/home/ui/screens/widgets/best_selling_items_grid.dart';
 import 'package:fruit_hub/features/home/ui/screens/widgets/featured_list.dart';
