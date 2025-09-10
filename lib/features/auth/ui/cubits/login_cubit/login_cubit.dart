@@ -1,5 +1,5 @@
 import 'package:bloc/bloc.dart';
-import 'package:fruit_hub/features/auth/domain/entites/user_entity.dart';
+import 'package:fruit_hub/features/auth/domain/entities/user_entity.dart';
 import 'package:fruit_hub/features/auth/domain/repos/auth_repo.dart';
 import 'package:meta/meta.dart';
 part 'login_state.dart';

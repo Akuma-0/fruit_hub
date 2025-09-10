@@ -16,6 +16,7 @@ class BestSellingItemsGrid extends StatelessWidget {
       itemBuilder: (context, index) {
         return FruitItemCard();
       },
+      itemCount: 4,
     );
   }
 }
