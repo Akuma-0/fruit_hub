@@ -3,11 +3,5 @@ class UserEntity {
   final String name;
   final String email;
   final String uId;
-  Map<String, dynamic> toMap() {
-    return {
-      'name': name,
-      'email': email,
-      'uId': uId,
-    };
-  }
+  
 }

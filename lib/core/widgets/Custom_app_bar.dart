@@ -5,6 +5,7 @@ AppBar buildAppBar({
   required String title,
   bool isBackButtonVisible = true,
   required BuildContext context,
+  List<Widget> actions = const [],
 }) {
   return AppBar(
     title: Text(title, style: TextStyles.bold19, textAlign: TextAlign.center),
@@ -21,5 +22,6 @@ AppBar buildAppBar({
               child: Icon(Icons.arrow_back_ios_new),
             )
             : null,
+    actions: actions,
   );
 }
